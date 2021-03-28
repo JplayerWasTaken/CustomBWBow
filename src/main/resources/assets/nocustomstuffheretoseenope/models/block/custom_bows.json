@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nocustomstuffheretoseenope:blocks/custombowboxfire",
+    "up": "nocustomstuffheretoseenope:blocks/custombowboxfire",
+    "north": "nocustomstuffheretoseenope:blocks/custombowboxfire",
+    "east": "nocustomstuffheretoseenope:blocks/custombowboxfire",
+    "south": "nocustomstuffheretoseenope:blocks/custombowboxfire",
+    "west": "nocustomstuffheretoseenope:blocks/custombowboxfire",
+    "particle": "nocustomstuffheretoseenope:blocks/custombowboxfire"
+  }
+}

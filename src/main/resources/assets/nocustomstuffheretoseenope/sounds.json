@@ -1,0 +1,11 @@
+{
+  "bannana": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "nocustomstuffheretoseenope:oggthing",
+        "stream": false
+      }
+    ]
+  }
+}

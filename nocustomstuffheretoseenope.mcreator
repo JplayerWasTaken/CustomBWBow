@@ -1,0 +1,238 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "FireBow",
+      "type": "gun",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_bow"
+    },
+    {
+      "name": "FireBowBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_bow_bullet_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MachineBow",
+      "type": "gun",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_bow"
+    },
+    {
+      "name": "GodKillerBow",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "one_shot_bow"
+    },
+    {
+      "name": "Bannana",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bannana"
+    },
+    {
+      "name": "BannanaGun",
+      "type": "gun",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bannana_gun"
+    },
+    {
+      "name": "BannanaSound",
+      "type": "musicdisc",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bannana_sound"
+    },
+    {
+      "name": "CustomBows",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "custom_bows"
+    },
+    {
+      "name": "FireBowClick",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_bow_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MachineBowClick",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_bow_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OneShotBowClick",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "one_shot_bow_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BannarangClick",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bannarang_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CustomBowShop",
+      "type": "gui",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "custom_bow_shop"
+    },
+    {
+      "name": "BannarangHit",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bannarang_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "bannana",
+      "files": [
+        "oggthing"
+      ],
+      "category": "player",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.nocustomstuffheretoseenope.bannana_sound.desc": "BANNANA GO BRRRRRRRRRRRRRRRRRRRRRRRRRR",
+      "item.nocustomstuffheretoseenope.bannana": "Bannana",
+      "subtitles.bannana": "",
+      "item.nocustomstuffheretoseenope.machine_bow": "Machine Bow",
+      "item.nocustomstuffheretoseenope.one_shot_bow": "One-Shot Bow",
+      "item.nocustomstuffheretoseenope.bannana_gun": "Bannanarang",
+      "block.nocustomstuffheretoseenope.custom_bows": "Custom Bows",
+      "item.nocustomstuffheretoseenope.fire_bow": "Fire Bow",
+      "item.nocustomstuffheretoseenope.bannana_sound": "Bannana Sound"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "nocustomstuffheretoseenope",
+    "modName": "nocustomstuffheretoseenope",
+    "version": "1.0.0",
+    "author": "jaspe, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.nocustomstuffheretoseenope",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100112313
+}
