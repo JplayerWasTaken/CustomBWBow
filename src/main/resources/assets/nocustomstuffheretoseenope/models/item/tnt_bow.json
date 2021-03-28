@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "nocustomstuffheretoseenope:items/oneshotbow"
+    "layer0": "nocustomstuffheretoseenope:items/tntbow"
   },
   "display": {
     "thirdperson_righthand": {

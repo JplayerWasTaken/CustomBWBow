@@ -162,7 +162,7 @@ public class MachineBowItem extends NocustomstuffheretoseenopeModElements.ModEle
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(Items.ARROW, (int) (1));
+			return new ItemStack(Items.IRON_NUGGET, (int) (1));
 		}
 
 		@Override

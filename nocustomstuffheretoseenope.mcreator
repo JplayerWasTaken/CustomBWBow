@@ -186,6 +186,44 @@
           }
         ]
       }
+    },
+    {
+      "name": "TNTBowBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tnt_bow_bullet_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TNTBow",
+      "type": "gun",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tnt_bow"
     }
   ],
   "variable_elements": [],
@@ -205,6 +243,7 @@
       "item.nocustomstuffheretoseenope.bannana": "Bannana",
       "subtitles.bannana": "",
       "item.nocustomstuffheretoseenope.machine_bow": "Machine Bow",
+      "item.nocustomstuffheretoseenope.tnt_bow": "TNT Bow",
       "item.nocustomstuffheretoseenope.one_shot_bow": "One-Shot Bow",
       "item.nocustomstuffheretoseenope.bannana_gun": "Bannanarang",
       "block.nocustomstuffheretoseenope.custom_bows": "Custom Bows",

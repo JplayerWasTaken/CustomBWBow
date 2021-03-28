@@ -34,19 +34,23 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
+import net.minecraft.block.Blocks;
 
+import net.mcreator.nocustomstuffheretoseenope.procedures.TNTBowBulletHitsBlockProcedure;
 import net.mcreator.nocustomstuffheretoseenope.NocustomstuffheretoseenopeModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @NocustomstuffheretoseenopeModElements.ModElement.Tag
-public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModElement {
-	@ObjectHolder("nocustomstuffheretoseenope:one_shot_bow")
+public class TNTBowItem extends NocustomstuffheretoseenopeModElements.ModElement {
+	@ObjectHolder("nocustomstuffheretoseenope:tnt_bow")
 	public static final Item block = null;
-	@ObjectHolder("nocustomstuffheretoseenope:entitybulletone_shot_bow")
+	@ObjectHolder("nocustomstuffheretoseenope:entitybullettnt_bow")
 	public static final EntityType arrow = null;
-	public GodKillerBowItem(NocustomstuffheretoseenopeModElements instance) {
-		super(instance, 4);
+	public TNTBowItem(NocustomstuffheretoseenopeModElements instance) {
+		super(instance, 14);
 	}
 
 	@Override
@@ -54,7 +58,7 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-				.size(0.5f, 0.5f)).build("entitybulletone_shot_bow").setRegistryName("entitybulletone_shot_bow"));
+				.size(0.5f, 0.5f)).build("entitybullettnt_bow").setRegistryName("entitybullettnt_bow"));
 	}
 
 	@Override
@@ -65,8 +69,8 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(1000));
-			setRegistryName("one_shot_bow");
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(100));
+			setRegistryName("tnt_bow");
 		}
 
 		@Override
@@ -110,7 +114,7 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 						}
 					}
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 25f, 25, 10);
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 1.1f, 0, 0);
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
@@ -160,7 +164,7 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(Items.NETHERITE_INGOT, (int) (1));
+			return new ItemStack(Blocks.TNT, (int) (1));
 		}
 
 		@Override
@@ -169,9 +173,40 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 		}
 
 		@Override
+		public void onCollideWithPlayer(PlayerEntity entity) {
+			super.onCollideWithPlayer(entity);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				TNTBowBulletHitsBlockProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				TNTBowBulletHitsBlockProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -183,6 +218,14 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
 			if (this.inGround) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					TNTBowBulletHitsBlockProcedure.executeProcedure($_dependencies);
+				}
 				this.remove();
 			}
 		}
@@ -209,10 +252,10 @@ public class GodKillerBowItem extends NocustomstuffheretoseenopeModElements.ModE
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 25f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(25);
-		entityarrow.setKnockbackStrength(10);
+		entityarrow.setDamage(0);
+		entityarrow.setKnockbackStrength(0);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();

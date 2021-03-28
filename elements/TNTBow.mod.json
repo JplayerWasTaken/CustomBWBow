@@ -3,9 +3,9 @@
   "_type": "gun",
   "definition": {
     "renderType": 0,
-    "texture": "machinebow",
+    "texture": "tntbow",
     "customModelName": "Normal",
-    "name": "Machine Bow",
+    "name": "TNT Bow",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
@@ -14,8 +14,8 @@
     "ammoItem": {
       "value": "Items.ARROW"
     },
-    "shootConstantly": true,
-    "usageCount": 1000,
+    "shootConstantly": false,
+    "usageCount": 100,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
@@ -23,15 +23,24 @@
     "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 3.1,
-    "bulletDamage": 0.1,
+    "bulletPower": 1.1,
+    "bulletDamage": 0.0,
     "bulletKnockback": 0,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "Items.IRON_NUGGET"
+      "value": "Blocks.TNT"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "TNTBowBulletHitsBlock"
+    },
+    "onBulletHitsPlayer": {
+      "name": "TNTBowBulletHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "TNTBowBulletHitsBlock"
+    }
   }
 }
