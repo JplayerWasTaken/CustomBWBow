@@ -24,7 +24,7 @@ public class IthasbeendoneProcedure extends NocustomstuffheretoseenopeModElement
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"give @s  nocustomstuffheretoseenope: a_normal_bow");
+						"give @s nocustomstufftoseeherenope:a_normal_bow ");
 			}
 		}
 	}
