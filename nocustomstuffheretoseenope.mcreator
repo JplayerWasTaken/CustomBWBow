@@ -186,6 +186,32 @@
           }
         ]
       }
+    },
+    {
+      "name": "ANormalBow",
+      "type": "gun",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "a_normal_bow"
+    },
+    {
+      "name": "Ithasbeendone",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ithasbeendone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -209,7 +235,8 @@
       "item.nocustomstuffheretoseenope.bannana_gun": "Bannanarang",
       "block.nocustomstuffheretoseenope.custom_bows": "Custom Bows",
       "item.nocustomstuffheretoseenope.fire_bow": "Fire Bow",
-      "item.nocustomstuffheretoseenope.bannana_sound": "Bannana Sound"
+      "item.nocustomstuffheretoseenope.bannana_sound": "Bannana Sound",
+      "item.nocustomstuffheretoseenope.a_normal_bow": "Bonemerang"
     }
   },
   "foldersRoot": {

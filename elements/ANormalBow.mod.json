@@ -1,0 +1,46 @@
+{
+  "_fv": 17,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "bone",
+    "customModelName": "Normal",
+    "name": "Bonemerang",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 5,
+    "ammoItem": {
+      "value": "CUSTOM:ANormalBow"
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 1.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:ANormalBow"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "Ithasbeendone"
+    },
+    "onBulletHitsPlayer": {
+      "name": "Ithasbeendone"
+    },
+    "onBulletHitsEntity": {
+      "name": "Ithasbeendone"
+    }
+  }
+}
