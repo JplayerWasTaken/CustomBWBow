@@ -250,6 +250,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "tnt_bow"
+    },
+    {
+      "name": "BonerangClick",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bonerang_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],

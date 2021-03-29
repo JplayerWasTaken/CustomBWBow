@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "gui",
   "definition": {
-    "type": 1,
+    "type": 0,
     "width": 176,
     "height": 166,
     "inventoryOffsetX": 0,
@@ -77,6 +77,28 @@
           "name": "Bannanarang",
           "x": 217,
           "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "TNT Bow",
+          "width": 60,
+          "height": 20,
+          "name": "TNT Bow",
+          "x": 131,
+          "y": 115
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Bonerang",
+          "width": 65,
+          "height": 20,
+          "name": "Bonerang",
+          "x": 230,
+          "y": 115
         }
       }
     ]

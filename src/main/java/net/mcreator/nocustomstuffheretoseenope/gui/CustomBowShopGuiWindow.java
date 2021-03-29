@@ -97,5 +97,13 @@ public class CustomBowShopGuiWindow extends ContainerScreen<CustomBowShopGui.Gui
 			NocustomstuffheretoseenopeMod.PACKET_HANDLER.sendToServer(new CustomBowShopGui.ButtonPressedMessage(3, x, y, z));
 			CustomBowShopGui.handleButtonAction(entity, 3, x, y, z);
 		}));
+		this.addButton(new Button(this.guiLeft + 5, this.guiTop + 78, 60, 20, new StringTextComponent("TNT Bow"), e -> {
+			NocustomstuffheretoseenopeMod.PACKET_HANDLER.sendToServer(new CustomBowShopGui.ButtonPressedMessage(4, x, y, z));
+			CustomBowShopGui.handleButtonAction(entity, 4, x, y, z);
+		}));
+		this.addButton(new Button(this.guiLeft + 104, this.guiTop + 78, 65, 20, new StringTextComponent("Bonerang"), e -> {
+			NocustomstuffheretoseenopeMod.PACKET_HANDLER.sendToServer(new CustomBowShopGui.ButtonPressedMessage(5, x, y, z));
+			CustomBowShopGui.handleButtonAction(entity, 5, x, y, z);
+		}));
 	}
 }
