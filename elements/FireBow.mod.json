@@ -29,7 +29,7 @@
     "bulletParticles": false,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {
-      "value": "Items.ARROW"
+      "value": "Blocks.FIRE"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",

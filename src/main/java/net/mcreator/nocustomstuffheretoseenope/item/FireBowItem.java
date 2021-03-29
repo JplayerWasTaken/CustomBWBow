@@ -34,6 +34,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
+import net.minecraft.block.Blocks;
 
 import net.mcreator.nocustomstuffheretoseenope.procedures.FireBowBulletHitsBlockProcedure;
 import net.mcreator.nocustomstuffheretoseenope.NocustomstuffheretoseenopeModElements;
@@ -163,7 +164,7 @@ public class FireBowItem extends NocustomstuffheretoseenopeModElements.ModElemen
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(Items.ARROW, (int) (1));
+			return new ItemStack(Blocks.FIRE, (int) (1));
 		}
 
 		@Override
