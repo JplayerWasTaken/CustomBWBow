@@ -10,12 +10,12 @@
     "creativeTab": {
       "value": "COMBAT"
     },
-    "stackSize": 5,
+    "stackSize": 1,
     "ammoItem": {
-      "value": "CUSTOM:ANormalBow"
+      "value": "Items.BONE"
     },
     "shootConstantly": false,
-    "usageCount": 0,
+    "usageCount": 1,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
@@ -23,24 +23,18 @@
     "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "BonerangClick"
+    },
     "bulletPower": 1.0,
     "bulletDamage": 5.0,
     "bulletKnockback": 0,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:ANormalBow"
+      "value": "Items.BONE"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": "",
-    "onBulletHitsBlock": {
-      "name": "Ithasbeendone"
-    },
-    "onBulletHitsPlayer": {
-      "name": "Ithasbeendone"
-    },
-    "onBulletHitsEntity": {
-      "name": "Ithasbeendone"
-    }
+    "customBulletModelTexture": ""
   }
 }
