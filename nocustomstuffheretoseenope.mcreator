@@ -217,7 +217,7 @@
       "name": "TNTBowBulletHitsBlock",
       "type": "procedure",
       "sortid": 14,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "tnt_bow_bullet_hits_block",
@@ -246,7 +246,7 @@
       "name": "TNTBow",
       "type": "gun",
       "sortid": 14,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "tnt_bow"
