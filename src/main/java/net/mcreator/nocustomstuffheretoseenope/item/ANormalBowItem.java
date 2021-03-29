@@ -23,13 +23,9 @@ import net.minecraft.item.ShootableItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
@@ -44,9 +40,6 @@ import net.mcreator.nocustomstuffheretoseenope.NocustomstuffheretoseenopeModElem
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
 
 @NocustomstuffheretoseenopeModElements.ModElement.Tag
 public class ANormalBowItem extends NocustomstuffheretoseenopeModElements.ModElement {
@@ -92,20 +85,6 @@ public class ANormalBowItem extends NocustomstuffheretoseenopeModElements.ModEle
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
 			return 72000;
-		}
-
-		@Override
-		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
-			if (slot == EquipmentSlotType.MAINHAND) {
-				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-				builder.putAll(super.getAttributeModifiers(slot));
-				builder.put(Attributes.ATTACK_DAMAGE,
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Ranged item modifier", (double) -1, AttributeModifier.Operation.ADDITION));
-				builder.put(Attributes.ATTACK_SPEED,
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Ranged item modifier", -2.4, AttributeModifier.Operation.ADDITION));
-				return builder.build();
-			}
-			return super.getAttributeModifiers(slot);
 		}
 
 		@Override
