@@ -68,6 +68,6 @@ public class BonerangClickProcedure extends NocustomstuffheretoseenopeModElement
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 30);
+		}.start(world, (int) 5);
 	}
 }

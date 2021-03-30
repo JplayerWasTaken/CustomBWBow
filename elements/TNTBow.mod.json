@@ -35,12 +35,6 @@
     "customBulletModelTexture": "",
     "onBulletHitsBlock": {
       "name": "TNTBowBulletHitsBlock"
-    },
-    "onBulletHitsPlayer": {
-      "name": "TNTBowBulletHitsBlock"
-    },
-    "onBulletHitsEntity": {
-      "name": "TNTBowBulletHitsBlock"
     }
   }
 }

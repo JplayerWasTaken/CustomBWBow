@@ -26,7 +26,7 @@
     "onRangedItemUsed": {
       "name": "BonerangClick"
     },
-    "bulletPower": 1.0,
+    "bulletPower": 1.3,
     "bulletDamage": 5.0,
     "bulletKnockback": 0,
     "bulletParticles": false,
